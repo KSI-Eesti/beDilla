@@ -2,40 +2,40 @@ import  {StyleSheet}  from 'react-native';
 
 const stile = StyleSheet.create({
     cookingTxt : {
+        top: 300,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     flexEnd : {
         flexDirection: 'column',
         justifyContent: 'flex-end',
-        alignItems: 'center'
+        alignItems: 'center',
+        top: 350
     },
     container : {
-        flex: 1
+        flex: 1,
+        flexDirection: 'column'
     },
     image : {
         flex: 1
     },
-    text : {
-        fontFamily: 'Times New Roman',
+    text : {    
         fontSize: 50,
-        fontWeight: 600,
+        fontWeight: '600',
         lineHeight: 60,
         textAlign: 'center',
         color: '#fff'
     },
     texte : {
-        fontFamily: 'Times New Roman',
-        fontSize: 12,
-        fontWeight: 200,
+        fontSize: 23,
+        fontWeight: '500',
         textAlign: 'center',
         color: '#fff'
     },
     textes : {
-        fontFamily: 'Times New Roman',
-        fontSize: 12,
-        fontWeight: 200,
+        fontSize: 23,
+        fontWeight: '500',
         textAlign: 'center',
         color: '#129575'
     },
@@ -44,7 +44,7 @@ const stile = StyleSheet.create({
         height : 60,
         justifyContent: 'center',
         alignItems: 'center',
-        marginVertical: 30,
+        marginVertical: 20,
         backgroundColor: '#129575',
         borderRadius: 10,
         borderWidth: 1
@@ -54,7 +54,7 @@ const stile = StyleSheet.create({
         height : 60,
         justifyContent: 'center',
         alignItems: 'center',
-        marginVertical: 30,
+        marginVertical: 10,
         backgroundColor: '#fff',
         borderRadius: 10,
         borderWidth: 1

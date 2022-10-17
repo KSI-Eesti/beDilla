@@ -9,11 +9,12 @@ const estilo = StyleSheet.create({
         flexDirection : 'column'
     },
     loadText : {
-        color : '#f41',
-        fontSize: 12
+        color : '#051',
+        fontSize: 12,
+        marginVertical: 25
     },
     imageStyle : {
-        marginVertical: 20
+        marginVertical: 40
     }
 });
 

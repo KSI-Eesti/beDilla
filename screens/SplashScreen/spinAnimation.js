@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { Animated } from 'react-native';
-import { images } from '../../constants/images';
+import images from '../../constants/images';
 
 const spinValue = new Animated.Value(0); // initialise the value of the spinning animation(for now it is static)
 
