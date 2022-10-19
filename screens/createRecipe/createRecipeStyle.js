@@ -39,6 +39,9 @@ const estilo = StyleSheet.create({
         fontWeight: '600',
         textAlign: 'center',
         color: '#fff'
+    },
+    view: {
+        alignItems: "center"
     }
 });
 

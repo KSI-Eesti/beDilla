@@ -9,7 +9,7 @@ export default function Home({navigation}) {
         <SafeAreaView style={leStyle.container}>
             <ScrollView showsVerticalScrollIndicator= {false}>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Description')}>
                     <View style={leStyle.view}>
                         <Image source={images.okok} style={leStyle.img}/>
                         {foodRecipes.slice(0, 1).map((foodRecipe, index) => {
@@ -23,7 +23,7 @@ export default function Home({navigation}) {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Description2')}>
                     <View style={leStyle.view}>
                         <Image source={images.ndole} style={leStyle.img}/>
                         {foodRecipes.slice(1, 2).map((foodRecipe, index) => {
@@ -36,9 +36,9 @@ export default function Home({navigation}) {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Description3')}>
                     <View style={leStyle.view}>
-                        <Image source={images.eru} style={leStyle.img}/>
+                        <Image source={images.sanga} style={leStyle.img}/>
                         {foodRecipes.slice(2, 3).map((foodRecipe, index) => {
                             return (
                                         <View key={index}>
@@ -49,9 +49,9 @@ export default function Home({navigation}) {
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Description4')}>
                     <View style={leStyle.view}>
-                        <Image source={images.sanga} style={leStyle.img}/>
+                        <Image source={images.eru} style={leStyle.img}/>
                         {foodRecipes.slice(3, 4).map((foodRecipe, index) => {
                             return (
                                         <View key={index}>

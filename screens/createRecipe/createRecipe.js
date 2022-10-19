@@ -38,7 +38,7 @@ export default function CreateRecipe({navigation}) {
                         };
 
                         storeUser(values);
-                        navigation.navigate('Home');
+                        navigation.navigate('SavedRecipe');
   
                     }
             }>
@@ -46,12 +46,12 @@ export default function CreateRecipe({navigation}) {
 
                     <>
 
-                    <View>
+                    <View style={estilo.view}>
                         <Text style={estilo.text}> Meal ID: </Text>
                         <TextInput style={estilo.textinput} onChangeText={props.handleChange('id')} value={props.values.id} keyboardType='numeric'/>
                     </View>
                     
-                    <View >
+                    <View style={estilo.view}>
                         <Text style={estilo.text}> Name: </Text>
                         <TextInput style={estilo.textinput} onChangeText={props.handleChange('name')} value={props.values.name} autoComplete='name' keyboardType='default'/>
                     </View>
@@ -66,12 +66,12 @@ export default function CreateRecipe({navigation}) {
                     {props.values.image && props.values.image.length > 0 ?
                     <Image source={{ uri: props.values.image }} style={{ width: 50, height: 50, borderRadius: 125, overflow: 'hidden', borderColor: '#121', borderWidth: 4, marginTop: 10 }} /> : null}
 
-                    <View >
+                    <View style={estilo.view}>
                         <Text style={estilo.text}> Recipe: </Text>
                         <TextInput style={estilo.textinput} onChangeText={props.handleChange('recipe')} value={props.values.recipe} multiline numberOfLines={55} keyboardType='default'/>
                     </View>
 
-                    <View >
+                    <View style={estilo.view}>
                         <Text style={estilo.text}> Description: </Text>
                         <TextInput style={estilo.textinput} onChangeText={props.handleChange('description')} value={props.values.description} multiline numberOfLines={55} keyboardType='default'/>
                     </View>
