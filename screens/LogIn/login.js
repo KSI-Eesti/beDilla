@@ -3,15 +3,18 @@ import { Text, TouchableOpacity, TextInput, View } from 'react-native';
 import { Formik } from 'formik';
 import style from './loginStyle';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import loginValidationSchema from '../../components/validation';
 
-export default function Login() {
+export default function Login({navigation}) {
+    
     return(
         <View style= {style.container}>
             <View style={style.headerText}>
                 <Text style={style.text}> Hello, </Text>
                 <Text style={style.texte2}> Welcome Back </Text>
             </View>
-            <Formik initialValues={{email: '', password: ''}} 
+            <Formik initialValues={{email: '', password: ''}}
+                    validationSchema={loginValidationSchema}
                     onSubmit={(values) => {
                         // storing data
                         const storeUser = async (values) => {
@@ -23,6 +26,7 @@ export default function Login() {
                         };
 
                         storeUser(values);
+                        navigation.navigate('Home');
   
                     }
             }>
@@ -33,10 +37,19 @@ export default function Login() {
 
                         </TextInput>
 
+                        <View> 
+                            {(props.errors.email && props.touched.email) && <Text style={{ fontSize: 10, color: 'red' }}>{props.errors.email}</Text>} 
+                        </View>
+
                         <Text style={style.texte}> Password : </Text>
-                        <TextInput style={style.textInput} placeholder='password' onChangeText={props.handleChange('password')} value={props.values.password} keyboardType='numbers-and-punctuation' autoComplete='password' secureTextEntry={true}>
+                        <TextInput style={style.textInput} placeholder='password' onChangeText={props.handleChange('password')} value={props.values.password} autoComplete='password' secureTextEntry={true}>
 
                         </TextInput>
+
+                        <View>  
+                            {(props.errors.password && props.touched.password) && <Text style={{ fontSize: 10, color: 'red' }}>{props.errors.password}</Text>}
+                        </View>
+
                         <TouchableOpacity style={style.login} onPress={props.handleSubmit}>
                             <Text style={style.textes}> Submit </Text>
                         </TouchableOpacity>
@@ -45,4 +58,4 @@ export default function Login() {
             </Formik>
         </View>
     );
-};
+}
